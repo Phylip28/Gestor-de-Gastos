@@ -1,0 +1,514 @@
+{
+	"info": {
+		"_postman_id": "5ff3346d-19ff-496e-b009-598462e1b9c9",
+		"name": "Trip Expenses API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49275207",
+		"_collection_link": "https://rafael-riosce-4472073.postman.co/workspace/Rafael-Enrique-Rios-Ceron's-Wor~ca142625-b0fe-4f5f-81e7-3a271f2ad27d/collection/48338791-5ff3346d-19ff-496e-b009-598462e1b9c9?action=share&source=collection_link&creator=49275207"
+	},
+	"item": [
+		{
+			"name": "Crear Usuario Juan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"Juan1@example.com\",\r\n  \"name\": \"Juan\",\r\n  \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Usuario Maria",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"Maria1@example.com\",\r\n  \"name\": \"Maria\",\r\n  \"password\": \"password1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Usuario Juan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"Juan1@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Usuario Juan",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-id",
+						"value": "5b373359-6b1d-40da-81e5-0eba100f7a56",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/profile/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"profile",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Viaje",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "user-id",
+						"value": "5b373359-6b1d-40da-81e5-0eba100f7a56",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Viaje a Cartagena\",\r\n  \"currency\": \"USD\",\r\n  \"participantEmails\": [\r\n    \"Juan1@example.com\",\r\n    \"Maria1@example.com\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/trips",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trips"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Viajes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-id",
+						"value": "5b373359-6b1d-40da-81e5-0eba100f7a56",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/trips",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trips"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Usuario Rafa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"Rafa3@example.com\",\r\n  \"name\": \"Rafael\",\r\n  \"password\": \"password1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unirse a un Viaje",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "user-id",
+						"value": "e5cad9a3-af10-4d59-9e40-1459bca5a92a",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"code\": \"LDYGSV\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/trips/join",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trips",
+						"join"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener detalles de un viaje",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-id",
+						"value": "5b373359-6b1d-40da-81e5-0eba100f7a56",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/trips/4e6eb6e7-c913-4e93-ba7a-6b2ac7e99503",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trips",
+						"4e6eb6e7-c913-4e93-ba7a-6b2ac7e99503"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar gasto - Cena",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "user-id",
+						"value": "e5cad9a3-af10-4d59-9e40-1459bca5a92a",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Cena en Creeps y Waffles\",\r\n  \"amount\": 150.50,\r\n  \"payerId\": \"5b373359-6b1d-40da-81e5-0eba100f7a56\",\r\n  \"sharedWithIds\": [\r\n    \"e5cad9a3-af10-4d59-9e40-1459bca5a92a\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/trips/4e6eb6e7-c913-4e93-ba7a-6b2ac7e99503/expenses?user-id=e5cad9a3-af10-4d59-9e40-1459bca5a92a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trips",
+						"4e6eb6e7-c913-4e93-ba7a-6b2ac7e99503",
+						"expenses"
+					],
+					"query": [
+						{
+							"key": "user-id",
+							"value": "e5cad9a3-af10-4d59-9e40-1459bca5a92a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar gastos de un viaje",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-id",
+						"value": "5b373359-6b1d-40da-81e5-0eba100f7a56",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/trips/4e6eb6e7-c913-4e93-ba7a-6b2ac7e99503/expenses?user-id=5b373359-6b1d-40da-81e5-0eba100f7a56",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trips",
+						"4e6eb6e7-c913-4e93-ba7a-6b2ac7e99503",
+						"expenses"
+					],
+					"query": [
+						{
+							"key": "user-id",
+							"value": "5b373359-6b1d-40da-81e5-0eba100f7a56"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver detalles de un gasto",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-id",
+						"value": "5b373359-6b1d-40da-81e5-0eba100f7a56",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/trips/4e6eb6e7-c913-4e93-ba7a-6b2ac7e99503/expenses/7b15fee7-f6b1-4057-8721-1bb916facce5?user-id=5b373359-6b1d-40da-81e5-0eba100f7a56",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trips",
+						"4e6eb6e7-c913-4e93-ba7a-6b2ac7e99503",
+						"expenses",
+						"7b15fee7-f6b1-4057-8721-1bb916facce5"
+					],
+					"query": [
+						{
+							"key": "user-id",
+							"value": "5b373359-6b1d-40da-81e5-0eba100f7a56"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver balances",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-id",
+						"value": "5b373359-6b1d-40da-81e5-0eba100f7a56",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/trips/4e6eb6e7-c913-4e93-ba7a-6b2ac7e99503/balances?user-id=5b373359-6b1d-40da-81e5-0eba100f7a56",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trips",
+						"4e6eb6e7-c913-4e93-ba7a-6b2ac7e99503",
+						"balances"
+					],
+					"query": [
+						{
+							"key": "user-id",
+							"value": "5b373359-6b1d-40da-81e5-0eba100f7a56"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Equilibrar cuentas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "user-id",
+						"value": "5b373359-6b1d-40da-81e5-0eba100f7a56",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Cena en Creeps y Waffles\",\r\n  \"amount\": 150.50,\r\n  \"payerId\": \"4e0f7a15-e4d9-43ab-bc1b-f4a5b4625b15\",\r\n  \"sharedWithIds\": [\r\n    \"4e0f7a15-e4d9-43ab-bc1b-f4a5b4625b15\",\r\n    \"fa1012b6-9e17-4320-81e7-1df0a95e705e\",\r\n    \"26b06b42-f594-44b3-bc1c-ea421cf89ea6\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/trips/4e6eb6e7-c913-4e93-ba7a-6b2ac7e99503/balances/settle?user-id=5b373359-6b1d-40da-81e5-0eba100f7a56",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trips",
+						"4e6eb6e7-c913-4e93-ba7a-6b2ac7e99503",
+						"balances",
+						"settle"
+					],
+					"query": [
+						{
+							"key": "user-id",
+							"value": "5b373359-6b1d-40da-81e5-0eba100f7a56"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
