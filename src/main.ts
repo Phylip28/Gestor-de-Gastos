@@ -10,10 +10,10 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
   // Habilita CORS para permitir peticiones desde cualquier origen, necesario para aplicaciones frontend
   app.enableCors();
-  // Inicia el servidor HTTP en el puerto 3000 y espera conexiones entrantes
-  await app.listen(3000);
+  // Inicia el servidor HTTP en el puerto 3002 y espera conexiones entrantes
+  await app.listen(3002);
   // Muestra mensaje en consola indicando que el servidor está listo para recibir peticiones
-  console.log('Aplicación corriendo en http://localhost:3000');
+  console.log('Aplicación corriendo en http://localhost:3002');
 }
 // Ejecuta la función bootstrap para iniciar la aplicación
 bootstrap();

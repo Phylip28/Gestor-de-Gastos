@@ -1,0 +1,356 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.nav button {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.nav button:hover {
+  background-color: white;
+  color: #667eea;
+  transform: translateY(-2px);
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 30px 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Footer */
+.footer {
+  background-color: #2d3748;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  color: #2d3748;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Botones */
+button {
+  background-color: #667eea;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: #5568d3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+button:disabled {
+  background-color: #cbd5e0;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Formularios */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  color: #4a5568;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+/* Lista de viajes */
+.viajes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.viaje-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  flex: 1 1 calc(33.333% - 20px);
+  min-width: 280px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.viaje-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
+.viaje-card h3 {
+  color: #667eea;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.viaje-card p {
+  color: #718096;
+  margin: 5px 0;
+}
+
+/* Loading y mensajes */
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #718096;
+  font-size: 18px;
+}
+
+.error {
+  background-color: #fed7d7;
+  color: #c53030;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+  border-left: 4px solid #c53030;
+}
+
+.success {
+  background-color: #c6f6d5;
+  color: #22543d;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+  border-left: 4px solid #22543d;
+}
+
+/* Gastos list */
+.gastos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.gasto-item {
+  background: #f7fafc;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gasto-info h4 {
+  color: #2d3748;
+  margin-bottom: 5px;
+}
+
+.gasto-info p {
+  color: #718096;
+  font-size: 14px;
+}
+
+.gasto-monto {
+  font-size: 20px;
+  font-weight: bold;
+  color: #667eea;
+}
+
+/* Balances */
+.balance-item {
+  background: #f7fafc;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.balance-positivo {
+  border-left: 4px solid #48bb78;
+}
+
+.balance-negativo {
+  border-left: 4px solid #f56565;
+}
+
+.balance-cero {
+  border-left: 4px solid #718096;
+}
+
+.balance-monto {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.monto-positivo {
+  color: #48bb78;
+}
+
+.monto-negativo {
+  color: #f56565;
+}
+
+.monto-cero {
+  color: #718096;
+}
+
+/* Transacciones */
+.transaccion-item {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid #e2e8f0;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Botones de acción */
+.btn-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.btn-secondary {
+  background-color: #718096;
+}
+
+.btn-secondary:hover {
+  background-color: #4a5568;
+}
+
+.btn-success {
+  background-color: #48bb78;
+}
+
+.btn-success:hover {
+  background-color: #38a169;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .viaje-card {
+    flex: 1 1 100%;
+  }
+  
+  .nav {
+    flex-direction: column;
+  }
+  
+  .btn-group {
+    flex-direction: column;
+  }
+  
+  .btn-group button {
+    width: 100%;
+  }
+
+  .nav-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.nav-buttons button {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #e2e8f0;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.nav-buttons button:hover {
+  background: #f7fafc;
+  border-color: #667eea;
+}
+
+.nav-buttons button.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+}
