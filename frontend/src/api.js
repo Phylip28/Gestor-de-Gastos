@@ -28,9 +28,7 @@ const fetchWithAuth = async (url, options = {}) => {
   return response.json();
 };
 
-// ============================================
 // FUNCIONES DE VIAJES (TRIPS)
-// ============================================
 
 /**
  * Obtener todos los viajes del usuario
@@ -61,9 +59,7 @@ export const obtenerViajeDetalle = async (tripId) => {
   return { data };
 };
 
-// ============================================
 // FUNCIONES DE GASTOS (EXPENSES)
-// ============================================
 
 /**
  * Crear un gasto en un viaje
@@ -78,9 +74,8 @@ export const crearGasto = async (tripId, datos) => {
   return { data };
 };
 
-// ============================================
+
 // FUNCIONES DE BALANCES
-// ============================================
 
 /**
  * Obtener balances de un viaje
@@ -100,9 +95,7 @@ export const liquidarBalances = async (tripId) => {
   return { data };
 };
 
-// ============================================
 // FUNCIONES DE AUTENTICACIÓN
-// ============================================
 
 /**
  * Registrar nuevo usuario

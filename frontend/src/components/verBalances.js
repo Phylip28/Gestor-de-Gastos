@@ -82,7 +82,7 @@ function VerBalances({ viaje, navegarA }) {
   return (
     <div className="card">
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-        <h2>💰 Balances: {viaje.name}</h2>
+        <h2>Balances: {viaje.name}</h2>
         <button onClick={() => navegarA('detalle', viaje)}>← Volver</button>
       </div>
 
@@ -172,7 +172,7 @@ function VerBalances({ viaje, navegarA }) {
           className="btn-secondary"
           onClick={cargarBalances}
         >
-          🔄 Actualizar Balances
+          Actualizar Balances
         </button>
         <button 
           onClick={() => navegarA('detalle', viaje)}
@@ -187,7 +187,7 @@ function VerBalances({ viaje, navegarA }) {
         background: '#edf2f7', 
         borderRadius: '8px' 
       }}>
-        <h3 style={{ fontSize: '16px', marginBottom: '10px' }}>💡 ¿Cómo funciona?</h3>
+        <h3 style={{ fontSize: '16px', marginBottom: '10px' }}> ¿Cómo funciona?</h3>
         <ul style={{ 
           fontSize: '14px', 
           color: '#4a5568', 

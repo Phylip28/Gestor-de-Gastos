@@ -18,7 +18,7 @@ function ListaViajes({ navegarA }) {
       setViajes(response.data);
     } catch (err) {
       console.error('Error al cargar viajes:', err);
-      setError('No se pudieron cargar los viajes. Asegúrate de que el backend esté corriendo.');
+      setError('No se pudieron cargar los viajes.');
     } finally {
       setLoading(false);
     }
@@ -47,7 +47,7 @@ function ListaViajes({ navegarA }) {
 
   return (
     <div className="card">
-      <h2>📋 Mis Viajes</h2>
+      <h2>Mis Viajes</h2>
       
       {viajes.length === 0 ? (
         <div style={{ textAlign: 'center', padding: '40px', color: '#718096' }}>

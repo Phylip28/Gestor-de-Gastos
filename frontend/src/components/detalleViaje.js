@@ -79,7 +79,7 @@ function DetalleViaje({ viaje, navegarA }) {
         </div>
       </div>
 
-      <h3 style={{ marginBottom: '15px' }}>💸 Gastos del viaje</h3>
+      <h3 style={{ marginBottom: '15px' }}>Gastos del viaje</h3>
       
       {detalles.expenses && detalles.expenses.length > 0 ? (
         <div className="gastos-list">

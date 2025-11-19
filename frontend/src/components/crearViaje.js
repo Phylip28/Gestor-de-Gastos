@@ -59,7 +59,7 @@ function CrearViaje({ navegarA }) {
 
   return (
     <div className="card">
-      <h2>✈️ Crear Nuevo Viaje</h2>
+      <h2>Crear Nuevo Viaje</h2>
 
       {error && <div className="error">{error}</div>}
       {success && <div className="success">{success}</div>}
@@ -128,7 +128,7 @@ function CrearViaje({ navegarA }) {
         background: '#edf2f7', 
         borderRadius: '8px' 
       }}>
-        <h3 style={{ fontSize: '16px', marginBottom: '10px' }}>💡 Consejo</h3>
+        <h3 style={{ fontSize: '16px', marginBottom: '10px' }}>Consejo</h3>
         <p style={{ fontSize: '14px', color: '#4a5568', lineHeight: '1.6' }}>
           Una vez creado el viaje, recibirás un código único que podrás compartir.
         </p>

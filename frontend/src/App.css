@@ -17,7 +17,7 @@ body {
 
 /* Header */
 .header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #0d7a9e 0%, #0a5c7a 100%);
   color: white;
   padding: 20px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -49,7 +49,7 @@ body {
 
 .nav button:hover {
   background-color: white;
-  color: #667eea;
+  color: #0d7a9e;
   transform: translateY(-2px);
 }
 
@@ -64,7 +64,7 @@ body {
 
 /* Footer */
 .footer {
-  background-color: #2d3748;
+  background-color: #0a5c7a;
   color: white;
   text-align: center;
   padding: 20px;
@@ -81,14 +81,14 @@ body {
 }
 
 .card h2 {
-  color: #2d3748;
+  color: #0d7a9e;
   margin-bottom: 20px;
   font-size: 24px;
 }
 
 /* Botones */
 button {
-  background-color: #667eea;
+  background-color: #ff8c00;
   color: white;
   border: none;
   padding: 12px 24px;
@@ -100,7 +100,7 @@ button {
 }
 
 button:hover {
-  background-color: #5568d3;
+  background-color: #e67e00;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
@@ -119,7 +119,7 @@ button:disabled {
 }
 
 .form-group label {
-  color: #4a5568;
+  color: #0a5c7a;
   font-weight: 600;
   margin-bottom: 8px;
   font-size: 14px;
@@ -137,7 +137,7 @@ button:disabled {
 .form-group input:focus,
 .form-group select:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #0d7a9e;
 }
 
 /* Lista de viajes */
@@ -156,21 +156,22 @@ button:disabled {
   min-width: 280px;
   cursor: pointer;
   transition: all 0.3s;
+  border-top: 4px solid #0d7a9e;
 }
 
 .viaje-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 12px rgba(13, 122, 158, 0.2);
 }
 
 .viaje-card h3 {
-  color: #667eea;
+  color: #0d7a9e;
   margin-bottom: 10px;
   font-size: 20px;
 }
 
 .viaje-card p {
-  color: #718096;
+  color: #4a5568;
   margin: 5px 0;
 }
 
@@ -178,7 +179,7 @@ button:disabled {
 .loading {
   text-align: center;
   padding: 40px;
-  color: #718096;
+  color: #0a5c7a;
   font-size: 18px;
 }
 
@@ -192,12 +193,12 @@ button:disabled {
 }
 
 .success {
-  background-color: #c6f6d5;
-  color: #22543d;
+  background-color: #d4edda;
+  color: #155724;
   padding: 15px;
   border-radius: 8px;
   margin: 20px 0;
-  border-left: 4px solid #22543d;
+  border-left: 4px solid #28a745;
 }
 
 /* Gastos list */
@@ -211,14 +212,14 @@ button:disabled {
   background: #f7fafc;
   padding: 15px;
   border-radius: 8px;
-  border-left: 4px solid #667eea;
+  border-left: 4px solid #0d7a9e;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .gasto-info h4 {
-  color: #2d3748;
+  color: #0a5c7a;
   margin-bottom: 5px;
 }
 
@@ -230,7 +231,7 @@ button:disabled {
 .gasto-monto {
   font-size: 20px;
   font-weight: bold;
-  color: #667eea;
+  color: #ff8c00;
 }
 
 /* Balances */
@@ -245,11 +246,11 @@ button:disabled {
 }
 
 .balance-positivo {
-  border-left: 4px solid #48bb78;
+  border-left: 4px solid #28a745;
 }
 
 .balance-negativo {
-  border-left: 4px solid #f56565;
+  border-left: 4px solid #dc3545;
 }
 
 .balance-cero {
@@ -262,11 +263,11 @@ button:disabled {
 }
 
 .monto-positivo {
-  color: #48bb78;
+  color: #28a745;
 }
 
 .monto-negativo {
-  color: #f56565;
+  color: #dc3545;
 }
 
 .monto-cero {
@@ -294,19 +295,49 @@ button:disabled {
 }
 
 .btn-secondary {
-  background-color: #718096;
+  background-color: #0a5c7a;
 }
 
 .btn-secondary:hover {
-  background-color: #4a5568;
+  background-color: #084152;
 }
 
 .btn-success {
-  background-color: #48bb78;
+  background-color: #28a745;
 }
 
 .btn-success:hover {
-  background-color: #38a169;
+  background-color: #218838;
+}
+
+/* Nav buttons */
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.nav-buttons button {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #e2e8f0;
+  background: white;
+  color: #0a5c7a;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin: 0;
+}
+
+.nav-buttons button:hover {
+  background: #f7fafc;
+  border-color: #0d7a9e;
+}
+
+.nav-buttons button.active {
+  background: #0d7a9e;
+  color: white;
+  border-color: #0d7a9e;
 }
 
 /* Responsive */
@@ -326,31 +357,4 @@ button:disabled {
   .btn-group button {
     width: 100%;
   }
-
-  .nav-buttons {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.nav-buttons button {
-  flex: 1;
-  padding: 12px;
-  font-size: 16px;
-  border: 2px solid #e2e8f0;
-  background: white;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.nav-buttons button:hover {
-  background: #f7fafc;
-  border-color: #667eea;
-}
-
-.nav-buttons button.active {
-  background: #667eea;
-  color: white;
-  border-color: #667eea;
-}
 }

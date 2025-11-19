@@ -14,7 +14,7 @@ function AgregarGasto({ viaje, navegarA }) {
     e.preventDefault();
 
     if (!titulo.trim()) {
-      setError('El título del gasto es obligatorio');
+      setError('El titulo del gasto es obligatorio');
       return;
     }
 
@@ -47,7 +47,7 @@ function AgregarGasto({ viaje, navegarA }) {
 
       await crearGasto(viaje.id, datos);
 
-      setSuccess('¡Gasto agregado exitosamente!');
+      setSuccess('Gasto agregado exitosamente');
 
       setTitulo('');
       setMonto('');
@@ -87,7 +87,7 @@ function AgregarGasto({ viaje, navegarA }) {
   if (!viaje) {
     return (
       <div className="card">
-        <p>No se ha seleccionado ningún viaje</p>
+        <p>No se ha seleccionado ningun viaje</p>
         <button onClick={() => navegarA('lista')}>Volver a la lista</button>
       </div>
     );
@@ -95,14 +95,14 @@ function AgregarGasto({ viaje, navegarA }) {
 
   return (
     <div className="card">
-      <h2>💸 Agregar Gasto a: {viaje.name}</h2>
+      <h2>Agregar Gasto a: {viaje.name}</h2>
 
       {error && <div className="error">{error}</div>}
       {success && <div className="success">{success}</div>}
 
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="titulo">Título del Gasto *</label>
+          <label htmlFor="titulo">Titulo del Gasto *</label>
           <input
             type="text"
             id="titulo"
@@ -138,7 +138,7 @@ function AgregarGasto({ viaje, navegarA }) {
             disabled={loading}
           />
           <small style={{ color: '#718096', fontSize: '12px' }}>
-            Ingresa el ID del usuario que realizó el pago
+            Ingresa el ID del usuario que realizo el pago. Puede ser tu propio ID o el de otra persona.
           </small>
         </div>
 
@@ -189,7 +189,7 @@ function AgregarGasto({ viaje, navegarA }) {
                       background: '#f56565'
                     }}
                   >
-                    ✕
+                    X
                   </button>
                 </div>
               ))}
@@ -199,7 +199,7 @@ function AgregarGasto({ viaje, navegarA }) {
 
         <div className="btn-group">
           <button type="submit" disabled={loading} className="btn-success">
-            {loading ? 'Guardando...' : '💾 Guardar Gasto'}
+            {loading ? 'Guardando...' : 'Guardar Gasto'}
           </button>
           <button 
             type="button"
@@ -215,15 +215,19 @@ function AgregarGasto({ viaje, navegarA }) {
       <div style={{ 
         marginTop: '30px', 
         padding: '20px', 
-        background: '#fff5f5', 
+        background: '#e0f2fe', 
         borderRadius: '8px',
-        borderLeft: '4px solid #f56565'
+        borderLeft: '4px solid #0369a1'
       }}>
-        <h3 style={{ fontSize: '16px', marginBottom: '10px', color: '#c53030' }}>
-          Nota Importante
+        <h3 style={{ fontSize: '16px', marginBottom: '10px', color: '#0c4a6e' }}>
+          Como obtener los IDs
         </h3>
-        <p style={{ fontSize: '14px', color: '#742a2a', lineHeight: '1.6' }}>
-        </p>
+        <ul style={{ fontSize: '14px', color: '#0c4a6e', lineHeight: '1.6', margin: 0, paddingLeft: '20px' }}>
+          <li><strong>Tu propio ID:</strong> Haz clic en "Ver Mi ID" en el header (arriba a la derecha)</li>
+          <li><strong>ID de otros usuarios:</strong> Pide a cada persona que comparta su ID desde su perfil</li>
+          <li><strong>Participantes:</strong> Agrega el ID de cada persona que compartira este gasto</li>
+          <li>El gasto se dividira equitativamente entre todos los participantes</li>
+        </ul>
       </div>
     </div>
   );
